@@ -96,6 +96,12 @@
                     <div *ngIf="<%= entityInstance + '.' + relationshipFieldName + "Id" %>">
                         <a [routerLink]="['/<%= otherEntityStateName %>', <%= entityInstance + '.' + relationshipFieldName + "Id" %>, 'view']">{{ <%= entityInstance + "." + relationshipFieldName + otherEntityFieldCapitalized %> }}</a>
                     </div>
+                    <dt>QrCode</dt>
+                <dd>
+                    <div>
+                        <qr-code [value]="'/<%= entityUrl %>/<%= entityInstance %>.id/view'" [size]="150"></qr-code>
+                    </div>
+                </dd>
                             <%_ } _%>
                         <%_ } _%>
                     <%_ } _%>
